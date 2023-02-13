@@ -1,0 +1,43 @@
+* {
+    font-family: Arial;
+    
+}
+
+.centered {
+	text-align: center;
+}
+
+.column {
+    float: left;
+}
+  
+.left {
+    width: 60%;
+}
+  
+.right {
+    width: 40%;
+}
+
+
+#frame {
+    width: 500px;
+    height: 500px;
+}
+
+.gen {
+    margin: 10px;
+}
+
+circle {
+    fill: blue;
+
+}
+
+circle:hover {
+    fill: yellow;
+}
+
+.border {
+    border-style: solid;
+}
