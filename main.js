@@ -29,13 +29,12 @@ window.onload = function() {
 };
 
 
-// adds event listener to all points already on graph
-// event listener adds border and displays coordinates on click
+
+// gets list of all points and loops through all of them and adds event listener to all points already on graph
 let points = document.getElementsByClassName("point");
-console.log('point clicked')
-console.log(points)
 for (let i = 1; i <= points.length; i++) {
     let point = document.getElementById(`pt${i}`);
+    // event listener adds border and displays x and y coordinates on click
     point.addEventListener("click", function(){
         xcoor = point.getAttribute("cx") / 50
         ycoor = (500 - point.getAttribute("cy")) / 50
