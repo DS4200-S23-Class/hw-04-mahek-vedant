@@ -22,25 +22,27 @@ window.onload = function() {
                 point.removeAttribute("stroke");
             } else {
                 point.setAttribute("stroke", "black");
+                point.setAttribute("stroke-width", "3px")
             }
         });
     })
 };
 
-// function pointClicked(point) {
-//     let points = document.getElementsByClassName("point");
-//     console.log('point clicked')
-// for (let i = 0; i < points.length; i++) {
-//     console.log(points[i]);
-//     // points[i].classList.toggle("border");
-//     points[i].addEventListener("click", function(){
-//         document.getElementById('output').innerHTML = "Selected Point Coordinates: " + "(" +points[i][0] + ", " + points[i][1] + ")";
-//     })
-// };
 
-
-
-//}
+// adds event listener to all points already on graph
+// event listener adds border and displays coordinates on click
+let points = document.getElementsByClassName("point");
+console.log('point clicked')
+console.log(points)
+for (let i = 1; i <= points.length; i++) {
+    let point = document.getElementById(`pt${i}`);
+    point.addEventListener("click", function(){
+        xcoor = point.getAttribute("cx") / 50
+        ycoor = (500 - point.getAttribute("cy")) / 50
+        document.getElementById('output').innerHTML = "Selected Point Coordinates: " + "(" +xcoor + ", " + ycoor + ")";
+        point.classList.toggle("border");
+})
+} 
 
 
 

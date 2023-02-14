@@ -44,5 +44,7 @@ circle:hover {
 
 .border {
     border-style: solid;
+    stroke: black;
+    stroke-width: 3px;
 }
 
