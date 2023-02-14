@@ -41,3 +41,7 @@ circle:hover {
 .border {
     border-style: solid;
 }
+
+.normal {
+    float: none
+}
