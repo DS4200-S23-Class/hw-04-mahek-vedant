@@ -19,6 +19,10 @@
     width: 40%;
 }
 
+.flex{
+    display: flex;
+    flex-direction: row;
+}
 
 #frame {
     width: 500px;
@@ -41,3 +45,4 @@ circle:hover {
 .border {
     border-style: solid;
 }
+

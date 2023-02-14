@@ -1,5 +1,4 @@
 
-
 window.onload = function() {
     document.getElementById("point-button").addEventListener("click", function() {
         let svg = document.getElementById("frame");
@@ -13,33 +12,35 @@ window.onload = function() {
         
         // Adding new point to plot
         svg.appendChild(point);
-        
+
         // add on click event listener for newly created point
-        point.addEventListener("click", pointClicked(points[i]));
-        
-    });
+        point.addEventListener("click", function(){
+            document.getElementById('output').innerHTML = "Selected Point Coordinates: " + "(" +xval + ", " + yval + ")";
+
+            // adds or removes border on click
+            if (point.getAttribute("stroke")) {
+                point.removeAttribute("stroke");
+            } else {
+                point.setAttribute("stroke", "black");
+            }
+        });
+    })
 };
 
-function pointClicked(point) {
-    point.classList.toggle("border");
-    let output = document.getElementById('output');
-    output.style.display = "block";
-    output.innerHTML = "Selected Vis: " + points[i].value;
-        
-}
+// function pointClicked(point) {
+//     let points = document.getElementsByClassName("point");
+//     console.log('point clicked')
+// for (let i = 0; i < points.length; i++) {
+//     console.log(points[i]);
+//     // points[i].classList.toggle("border");
+//     points[i].addEventListener("click", function(){
+//         document.getElementById('output').innerHTML = "Selected Point Coordinates: " + "(" +points[i][0] + ", " + points[i][1] + ")";
+//     })
+// };
 
 
 
-// looping through all points and adding event listeners on click
-let points = document.getElementsByClassName("point");
-for (let i = 0; i < points.length; i++) {
-    console.log(points[i]);
-    points[i].addEventListener("click", () => pointClicked(points[i]));
-}
-
-// points.forEach((point) => {
-//     point.addEventListener("click", () => pointClicked(point));
-// });
+//}
 
 
 

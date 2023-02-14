@@ -4,7 +4,6 @@
 <head>
     <meta charset=utf-8/>
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
     <title>hw-04</title>
 
 </head>
@@ -16,7 +15,7 @@
 
 <h1 class="centered"> hw-04: Event Handling </h1>
 
-
+<div class="flex">
 <div class="column left">
     <div class="gen">
 
@@ -34,7 +33,7 @@
 
   <div class="column right">
     <div class="dropdown">
-        <h3> Select x coordinate</h3>
+        <p> Select x coordinate</p>
         <select id="x">
             <script>
                 for (let i = 1; i <= 9; i++) {
@@ -45,7 +44,7 @@
     </div>
 
     <div class="dropdown">
-        <h3> Select y coordinate</h3>
+        <p> Select y coordinate</p>
         <select id="y">
             <script>
                 for (let i = 1; i <= 9; i++) {
@@ -57,21 +56,26 @@
 
     <button type="button" id="point-button">Add point to graph</button>
 
-    <p id="output" style="display: none;"></p>
+    <p id="output"> Point coordinates: </p>
 
 
 </div>
 
-<h2 class="centered"> Acknowledgements </h2>
+</div>
+
 <div>
-    <ul>
-        <li>https://stackoverflow.com/questions/40956717/how-to-addeventlistener-to-multiple-elements-in-a-single-line</li>
-        <li>https://idiallo.com/javascript/uncaught-typeerror-cannot-read-property-of-null</li>
-        <li>https://www.javatpoint.com/how-to-create-dropdown-list-using-javascript</li>
-
-    </ul>
+    <h2 class="centered"> Acknowledgements </h2>
+    <div>
+        <ul>
+            <li>https://stackoverflow.com/questions/40956717/how-to-addeventlistener-to-multiple-elements-in-a-single-line</li>
+            <li>https://idiallo.com/javascript/uncaught-typeerror-cannot-read-property-of-null</li>
+            <li>https://www.javatpoint.com/how-to-create-dropdown-list-using-javascript</li>
+        </ul>
+    </div>
 </div>
 
+
+<script src="main.js"></script>
 
 </body>
 
